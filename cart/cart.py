@@ -52,7 +52,10 @@ class Cart(object):
         for item in cart.values():
             item['price'] = Decimal(item['price'])
             item['total_price'] = item['price'] * item['quantity']
-        yield item
+            # yield, в отличие от оператора return,
+            # используется для превращения обычной функции Python в генератор
+            # используем для итеративного вывода объектов в корзине
+            yield item
 
     def __len__(self):
         """ Возвращаем общее количество товаров в корзине. """

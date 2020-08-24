@@ -7,6 +7,7 @@ from cart.cart import Cart
 
 def order_create(request):
     cart = Cart(request)
+    form = OrderCreateForm()
     if request.method == 'POST':
         form = OrderCreateForm(request.POST)
         if form.is_valid():

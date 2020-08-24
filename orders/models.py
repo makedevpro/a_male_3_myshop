@@ -7,6 +7,7 @@ from shop.models import  Product
 
 
 class Order(models.Model):
+    """ Модель заказа """
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     email = models.EmailField()
@@ -28,6 +29,7 @@ class Order(models.Model):
 
 
 class OrderItem(models.Model):
+    """ Модель информации о товаре и связаной с ним корзиной """
     order = models.ForeignKey(Order,
                               related_name='items',
                               on_delete=models.CASCADE)

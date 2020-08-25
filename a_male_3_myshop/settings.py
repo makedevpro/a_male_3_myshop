@@ -135,3 +135,5 @@ CART_SESSION_ID = 'cart'
 # CELERY_ALWAYS_EAGER позволит вам выполнять асинхронные задачи локально в
 # синхронном режиме вместо отправки их в очередь. Это бывает полезно для
 # запуска юнит-тестов или запуска приложения локально без установки Celery.
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

@@ -137,3 +137,16 @@ CART_SESSION_ID = 'cart'
 # запуска юнит-тестов или запуска приложения локально без установки Celery.
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+BRAINTREE_MERCHANT_ID = 'vfs246n6j2c42z69'
+BRAINTREE_PUBLIC_KEY = '9d24xf2p42qgtw22'
+BRAINTREE_PRIVATE_KEY = 'd6db579303b1a8dd236fc62311da3538'
+
+from braintree import Configuration, Environment
+
+Configuration.configure(
+    Environment.Sandbox,  # for production, use Environment.Production
+    BRAINTREE_MERCHANT_ID,
+    BRAINTREE_PUBLIC_KEY,
+    BRAINTREE_PRIVATE_KEY
+)

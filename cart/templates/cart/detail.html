@@ -1,21 +1,22 @@
 {% extends 'shop/base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block title %}
-    Your shopping cart
+    {% trans 'Your shopping cart' %}
 {% endblock %}
 
 {% block content %}
-    <h1>Your shopping cart</h1>
+    <h1>{% trans 'Your shopping cart' %}</h1>
     <table class="cart">
         <thead>
             <tr>
-                <th>Image</th>
-                <th>Product</th>
-                <th>Quantity</th>
-                <th>Remove</th>
-                <th>Unit price</th>
-                <th>Price</th>
+                <th>{% trans 'Image' %}</th>
+                <th>{% trans 'Product' %}</th>
+                <th>{% trans 'Quantity' %}</th>
+                <th>{% trans 'Remove' %}</th>
+                <th>{% trans 'Unit price' %}</th>
+                <th>{% trans 'Price' %}</th>
             </tr>
         </thead>
         <tbody>
@@ -37,7 +38,7 @@
                             </form>
                         </td>
                         <td>
-                            <a href="{% url 'cart:cart_remove' product.id %}">Remove</a>
+                            <a href="{% url 'cart:cart_remove' product.id %}">{% trans 'Remove' %}</a>
                         </td>
                         <td class="num">{{ item.price }}</td>
                         <td class="num">{{ item.total_price }}</td>
@@ -52,8 +53,10 @@
                 </tr>
                 <tr>
                     <td>
-                        "{{ cart.coupon.code }}" coupon
-                        ({{ cart.coupon.discount }}% off)
+                        {% blocktrans with code=cart.coupon.code discount=cart.coupon.discount%}
+                        "{{ code }}" coupon
+                        ({{ discount }}% off)
+                        {% endblocktrans %}
                     </td>
                     <td colspan="4"></td>
                     <td class="num reg">
@@ -70,14 +73,14 @@
             </tr>
         </tbody>
     </table>
-    <p>Apply a coupon:</p>
+    <p>{% trans 'Apply a coupon:' %}</p>
     <form action="{% url 'coupons:apply' %}" method="post">
         {{ coupon_apply_form }}
         <input type="submit" value="Apply">
         {% csrf_token %}
     </form>
     <p class="text-right">
-        <a href="{% url 'shop:product_list' %}" class="button light">Continue shopping</a>
-        <a href="{% url 'orders:order_create' %}" class="button">Checkout</a>
+        <a href="{% url 'shop:product_list' %}" class="button light">{% trans 'Continue shopping' %}</a>
+        <a href="{% url 'orders:order_create' %}" class="button">{% trans 'Checkout' %}</a>
     </p>
 {% endblock %}

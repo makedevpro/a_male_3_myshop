@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-26 10:39+0000\n"
+"POT-Creation-Date: 2020-08-26 11:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,52 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-#: cart/forms.py:11
+
+#: cart/forms.py:11 cart/templates/cart/detail.html:16
 msgid "Quantity"
+msgstr ""
+
+#: cart/templates/cart/detail.html:6 cart/templates/cart/detail.html:10
+msgid "Your shopping cart"
+msgstr ""
+
+#: cart/templates/cart/detail.html:14
+msgid "Image"
+msgstr ""
+
+#: cart/templates/cart/detail.html:15
+msgid "Product"
+msgstr ""
+
+#: cart/templates/cart/detail.html:17 cart/templates/cart/detail.html:41
+msgid "Remove"
+msgstr ""
+
+#: cart/templates/cart/detail.html:18
+msgid "Unit price"
+msgstr ""
+
+#: cart/templates/cart/detail.html:19
+msgid "Price"
+msgstr ""
+
+#: cart/templates/cart/detail.html:56
+#, python-format
+msgid ""
+"\n"
+"                        \"%(code)s\" coupon\n"
+"                        (%(discount)s%% off)\n"
+"                        "
+msgstr ""
+
+#: cart/templates/cart/detail.html:76
+msgid "Apply a coupon:"
+msgstr ""
+
+#: cart/templates/cart/detail.html:83
+msgid "Continue shopping"
+msgstr ""
+
+#: cart/templates/cart/detail.html:84
+msgid "Checkout"
 msgstr ""

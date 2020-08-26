@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-26 10:39+0000\n"
+"POT-Creation-Date: 2020-08-26 11:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,6 +27,35 @@ msgstr "Английский"
 #: a_male_3_myshop/settings.py:121
 msgid "Russian"
 msgstr "Русский"
+
+#: shop/templates/shop/base.html:8 shop/templates/shop/base.html:13
+msgid "My shop"
+msgstr "My Shop"
+
+#: shop/templates/shop/base.html:19
+msgid "Your cart:"
+msgstr "Корзина покупок"
+
+#: shop/templates/shop/base.html:21
+#, python-format
+msgid ""
+"\n"
+"                        %(total_items)s item %(total_items_plural)s,\n"
+"                        $%(total_price)s\n"
+"                    "
+msgstr ""
+"\n"
+"                        %(total_items)s item %(total_items_plural)s,\n"
+"                        $%(total_price)s\n"
+"                    "
+
+#: shop/templates/shop/base.html:27
+msgid "Your cart is empty."
+msgstr "Ваша корзина пуста"
+
+#: shop/templates/shop/product/detail.html:20
+msgid "Add to cart"
+msgstr "Добаивть в козину"
 
 #: venv/lib/python3.7/site-packages/django/contrib/messages/apps.py:7
 msgid "Messages"

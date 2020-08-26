@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rosetta',
+    'parler',
 
     'shop.apps.ShopConfig',
     'cart.apps.CartConfig',
@@ -123,6 +124,21 @@ LANGUAGES = (
     ('ru', _('Russian')),
 )
 
+LOCALE_PATH = (
+    os.path.join(BASE_DIR, 'locale/'),
+)
+
+PARLER_LANGUAGES = {
+    None: (
+        {'code': 'en'},
+        {'code': 'ru'},
+    ),
+    'default': {
+        'fallback': 'en',  # язык по умолчани.
+        'hide_untranslated': False,  # не скрывать непереведенное содержимое
+    }
+}
+
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
@@ -161,8 +177,4 @@ Configuration.configure(
     BRAINTREE_MERCHANT_ID,
     BRAINTREE_PUBLIC_KEY,
     BRAINTREE_PRIVATE_KEY
-)
-
-LOCALE_PATH = (
-    os.path.join(BASE_DIR, 'locale/'),
 )

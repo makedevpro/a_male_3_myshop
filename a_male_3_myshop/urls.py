@@ -28,7 +28,7 @@ urlpatterns = i18n_patterns(
     path(_('payments/'), include('payment.urls', namespace='payment')),
     path(_('coupons/'), include('coupons.urls', namespace='coupons')),
     path(_('admin/'), admin.site.urls),
-    path('i18n/', include('django.conf.urls.i18n')),
+    # path('i18n/', include('django.conf.urls.i18n')),
     path('', include('shop.urls', namespace='shop')),
     prefix_default_language=False
 )

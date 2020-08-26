@@ -63,6 +63,9 @@ def payment_process(request):
             # Отправка сообщения
             email.send()
 
+            # Удаление купона из сессии, после успешной оплаты заказа
+            del request.session['coupon_id']
+
             return redirect('payment:done')
         else:
             return redirect('payment:canceled')

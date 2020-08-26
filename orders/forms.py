@@ -9,7 +9,7 @@ class OrderCreateForm(forms.ModelForm):
     """
     Форма для созданиея нового объекта Order при формировании заказа из корзины
     """
-    postal_code = USZipCodeField()
+    # postal_code = USZipCodeField()
 
     class Meta:
         model = Order

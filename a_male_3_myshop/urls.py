@@ -30,7 +30,7 @@ urlpatterns = i18n_patterns(
     path(_('admin/'), admin.site.urls),
     # path('i18n/', include('django.conf.urls.i18n')),
     path('', include('shop.urls', namespace='shop')),
-    prefix_default_language=False
+    # prefix_default_language=False
 )
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
